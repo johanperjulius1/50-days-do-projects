@@ -6,31 +6,58 @@
 
 
 body {
-  font-family: "Roboto", "sans-serif";
-  align-items: center;
-  justify-content: center;
+  font-family: "Muli", "sans-serif";
   height: 100vh;
   overflow: hidden;
-}
-
-.section {
-  border: 10px solid black;
-}
-
-
-.cards {
-  width: 80%;
   display: flex;
-  flex-direction: row;
-  border: 10px solid pink;
+  justify-content: center;
+  align-items: center;
+}
+.cards {
+  width: 80vw;
+  display: flex;
+  height: 70vh;
+  margin-top: 1.25rem;
 
 }
 
-.card.active {
-  flex: 3;
-}
-
-img {
+.card {
+  flex: 0.5;
+  margin-left: 10px;
   width: 100%;
   height: 100%;
+  border-radius: 25px;
+  color: white;
+  position: relative;
+  }
+
+  .card__text {
+    display: none;
+    position: absolute;
+    font-size: 1.5rem;
+    bottom: 1.25rem;
+    left: 1.25rem;
+  }
+
+
+.card.active {
+  flex: 2;
+}
+
+.card.active .card__text {
+  display: block;
+}
+
+@media(max-width: 750px) {
+  .card:nth-of-type(4) {
+    display: none;
+  }
+  .card:nth-of-type(5) {
+    display: none;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
 }
