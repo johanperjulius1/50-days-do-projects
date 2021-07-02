@@ -1,10 +1,14 @@
-const cards = document.querySelectorAll('.card')
+const cards = document.querySelectorAll(".card");
 
-cards.forEach((card)=>{
-card.addEventListener('click',()=>{
+cards.forEach((card) => {
+  console.log('hello')
+  card.addEventListener("click", () => {
+    console.log('hi')
     cards.forEach((card) => {
-        card.setAttribute('class', 'card')
-    })
-    card.setAttribute('class', 'card active')
-})
-})
+      console.log('hej')
+      card.setAttribute("class", "card");
+    });
+    console.log('då')
+    card.setAttribute("class", "card active");
+  });
+});
